@@ -14,5 +14,4 @@ else
 fi
 
 # Execute scrcpy
-scrcpy -K --window-x 3840 --window-y 0 --window-height 1080 --window-width 469 -m1920 --max-fps=60 --select-tcpip
-
+scrcpy --video-source=camera --v4l2-sink=/dev/video2 --no-video-playback --camera-id=0 --camera-size=1920x1440 --camera-fps=60 --video-codec=h264 --no-audio
